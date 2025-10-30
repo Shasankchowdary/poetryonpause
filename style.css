@@ -214,13 +214,3 @@ h1 a:hover {
   transition: all 0.3s ease;
 }
 
-p a {
-  text-decoration: none;
-  color: #f6e6c2; /* your warm moon-golden color */
-}
-
-p a:hover {
-  color: #fff2c2;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
