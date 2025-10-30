@@ -1,0 +1,204 @@
+/* Font and body setup */
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 20% 20%, #1b1a1a 0%, #0b0b0c 100%);
+  color: #f8f3e7;
+  font-family: 'Lora', serif;
+  overflow-x: hidden;
+  line-height: 1.8;
+}
+
+/* Glowing golden moon */
+.moon {
+  position: fixed;
+  top: 40px;
+  right: 60px;
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle, #f4e3b2 40%, rgba(244, 227, 178, 0.2) 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 25px 8px rgba(255, 220, 150, 0.5);
+  animation: glow 6s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 15px 5px rgba(255, 220, 150, 0.3); }
+  to { box-shadow: 0 0 35px 12px rgba(255, 220, 150, 0.7); }
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-top: 120px;
+  padding: 0 20px;
+  animation: fadeIn 2.5s ease forwards;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #f6e6c2;
+  text-shadow: 0 0 20px rgba(244, 227, 178, 0.3);
+}
+
+.tagline {
+  font-style: italic;
+  color: #d6c9a6;
+  margin-top: -10px;
+  font-size: 1.1rem;
+}
+
+/* Featured Poem Section */
+.featured {
+  width: 70%;
+  max-width: 800px;
+  margin: 100px auto 80px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid rgba(255, 220, 150, 0.4);
+  border-radius: 6px;
+  box-shadow: 0 0 25px rgba(244, 227, 178, 0.1);
+  animation: fadeIn 3.5s ease forwards;
+}
+
+.featured h2 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #f4e3b2;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.poem {
+  margin-bottom: 25px;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.philosophy h3 {
+  color: #e9d7a1;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 10px;
+}
+
+/* Poem list */
+.poem-list {
+  text-align: center;
+  margin-bottom: 80px;
+  animation: fadeIn 4.5s ease forwards;
+}
+
+.poem-list h2 {
+  color: #f6e6c2;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 20px;
+}
+
+.poem-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.poem-list li {
+  margin: 10px 0;
+}
+
+.poem-list a {
+  text-decoration: none;
+  color: #e9d7a1;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.poem-list a:hover {
+  color: #fff2c2;
+  letter-spacing: 1px;
+}
+
+/* Back link */
+.back-link {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.back-link a {
+  color: #e9d7a1;
+  text-decoration: none;
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+  color: #fff2c2;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #c8bca2;
+  padding-bottom: 40px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Tablets & Small Screens */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .featured {
+    width: 85%;
+    padding: 30px;
+  }
+  .moon {
+    width: 70px;
+    height: 70px;
+    right: 40px;
+    top: 30px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  body {
+    line-height: 1.7;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  .tagline {
+    font-size: 1rem;
+  }
+  .featured {
+    width: 90%;
+    margin: 70px auto;
+    padding: 25px;
+  }
+  .poem {
+    font-size: 1rem;
+  }
+  .moon {
+    width: 55px;
+    height: 55px;
+    right: 20px;
+    top: 20px;
+    box-shadow: 0 0 15px 5px rgba(255, 220, 150, 0.5);
+  }
+  .poem-list a {
+    font-size: 1rem;
+  }
+  footer {
+    font-size: 0.8rem;
+  }
+}

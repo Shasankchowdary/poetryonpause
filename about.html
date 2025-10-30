@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About the Poet | Poetry on Pause</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Lora&display=swap" rel="stylesheet">
+  <style>
+    /* Additional styling just for the About page */
+
+    .about-section {
+      width: 80%;
+      max-width: 900px;
+      margin: 140px auto 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .poet-photo {
+      width: 280px;
+      height: 280px;
+      background: url('pop.jpg') center/cover no-repeat;
+      border-radius: 12px;
+      border: 2px solid rgba(244, 227, 178, 0.4);
+      box-shadow: 0 0 35px rgba(244, 227, 178, 0.15);
+      position: relative;
+    }
+
+    /* A poetic frame glow around the photo */
+    .poet-photo::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border: 1px solid rgba(255, 220, 150, 0.2);
+      border-radius: 16px;
+      filter: blur(2px);
+      animation: frameGlow 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes frameGlow {
+      from { box-shadow: 0 0 10px rgba(255, 220, 150, 0.1); }
+      to { box-shadow: 0 0 25px rgba(255, 220, 150, 0.3); }
+    }
+
+    .poet-info {
+      flex: 1;
+      color: #f6e6c2;
+      font-size: 1.1rem;
+      line-height: 1.9;
+      font-family: 'Lora', serif;
+    }
+
+    .poet-info h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #f4e3b2;
+    }
+
+    .poet-info p {
+      color: #d6c9a6;
+      margin-bottom: 20px;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 700px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+      }
+
+      .poet-photo {
+        width: 220px;
+        height: 220px;
+      }
+
+      .poet-info h2 {
+        font-size: 1.8rem;
+      }
+
+      .poet-info p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Glowing Moon -->
+  <div class="moon"></div>
+
+  <header>
+    <h1>About the Poet</h1>
+    <p class="tagline">"In the quiet, words find their pulse."</p>
+  </header>
+
+  <section class="about-section">
+    <!-- Replace 'your-photo.jpg' with your real image filename -->
+    <div class="poet-photo"></div>
+
+    <div class="poet-info">
+      <h2>The Soul Behind <em>Poetry on Pause</em></h2>
+      <p>
+        A lover of silence, twilight, and the art of almost-saying —  
+        the poet behind <em>Poetry on Pause</em> writes not to be understood,  
+        but to remember how it feels to feel.
+      </p>
+      <p>
+        Every poem here is a quiet heartbeat — a reflection of longing, memory,  
+        and the beauty hidden in things left unsaid.  
+        This space was never meant to be loud — it was meant to breathe.
+      </p>
+      <p>
+        Words became a home when the world felt too transient.  
+        And in these pauses between breaths, you might find a piece of yourself too.
+      </p>
+    </div>
+  </section>
+
+  <div class="back-link">
+    <a href="index.html">← Return to Poetry on Pause</a>
+  </div>
+
+  <footer>
+    <p>© 2025 Poetry on Pause — Crafted under moonlight.</p>
+  </footer>
+</body>
+</html>
